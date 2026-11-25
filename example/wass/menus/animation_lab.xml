@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 动画演示：按钮重放预设动画 + 三个常驻动画 / animation demo: buttons replay presets plus three looping animations -->
+<menu id="animation_lab" title="动画演示" width="560" height="420">
+  <style>
+    .panel  { background: #F25A1119; border-color: #FF5555; border-width: 1; radius: 8; }
+    .card   { background: #33FF8888; border-color: #FF6B6B; border-width: 1; radius: 6; padding: 6; }
+    .btn    { background: #FF8E1B1B; border-color: #FFFF5555; border-width: 1; radius: 4; text-color: #FFFFFF; font-size: 9; text-shadow: false; }
+    .title  { text-color: #FFFFF1EA; font-size: 14; text-shadow: false; }
+    .muted  { text-color: #FFFFEFE8; font-size: 9; text-shadow: false; }
+  </style>
+
+  <panel class="panel" layout="column" width="100%" height="100%" padding="10" gap="8">
+    <label class="title" text="§d动画演示" width="100%" height="18"/>
+    <label class="muted" text="§7点击按钮重放预设动画；下面三个方块是常驻动画。"
+           width="100%" height="12"/>
+
+    <panel id="anim_box" width="140" height="52" background="#FFB71C1C" radius="8"
+           alignItems="center" justifyContent="center">
+      <label id="anim_box_label" class="title" text="§f动画目标" width="100%" height="16" textAlign="center"/>
+    </panel>
+
+    <row width="100%" height="22" gap="6">
+      <button id="btn_fadein" class="btn" text="fadeIn" flex="1" height="20"/>
+      <button id="btn_slide" class="btn" text="slideInLeft" flex="1" height="20"/>
+      <button id="btn_popin" class="btn" text="popIn" flex="1" height="20"/>
+      <button id="btn_pulse" class="btn" text="pulse" flex="1" height="20"/>
+    </row>
+    <row width="100%" height="22" gap="6">
+      <button id="btn_rotate" class="btn" text="rotate 180" flex="1" height="20"/>
+      <button id="btn_move" class="btn" text="move X" flex="1" height="20"/>
+      <button id="btn_scale" class="btn" text="scale" flex="1" height="20"/>
+      <button id="btn_shake" class="btn" text="shake" flex="1" height="20"/>
+    </row>
+
+    <label class="muted" text="§7常驻动画：" width="100%" height="12"/>
+    <row width="100%" height="56" gap="12" alignItems="center">
+      <panel id="spin_box" width="46" height="46" background="#FFE67E22" radius="6"/>
+      <panel id="bob_box" width="46" height="46" background="#FF9B59B6" radius="23"/>
+      <panel id="breathe_box" width="46" height="46" background="#FF1ABC9C" radius="6"/>
+      <label class="muted" text="§8旋转 / 上下浮动 / 呼吸" flex="1" height="12"/>
+    </row>
+
+    <row width="100%" height="22" gap="6">
+      <button id="btn_replay" class="btn" text="§e重新播放全部" flex="1" height="20"/>
+      <button id="btn_close_lab" class="btn" text="§c关闭" flex="1" height="20"/>
+    </row>
+  </panel>
+</menu>

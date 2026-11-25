@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 二级组件：被 stat_card.xml include 两次 / second-level component, included twice by stat_card.xml -->
+<component layout="row" width="100%" height="17" gap="4" alignItems="center"
+           background="#12201FF2" radius="3" padding="2">
+  <style>
+    .muted  { color: #7FA89C; font-size: 8; text-shadow: false; }
+    .accent { color: #7FE08A; font-size: 8; text-shadow: false; }
+  </style>
+
+  <label class="muted" text="二级 include 行" flex="1" height="10"/>
+  <label class="accent" text="OK" width="20" height="10" textAlign="right"/>
+</component>

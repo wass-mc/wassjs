@@ -1,0 +1,22 @@
+<!-- wass/menus/hello.xml -->
+<!-- 最小可执行窗口：复制到 <游戏根目录>/wass/menus/ 下，再放同名的 js/hello.js -->
+<!-- Minimal working window: copy into <game directory>/wass/menus/ together with js/hello.js -->
+<menu id="hello" title="Hello WassJS" width="380" height="200">
+  <style>
+    .panel { background: #F2181212; border-color: #FF5555FF; border-width: 1; radius: 6; }
+    .title { text-color: #FFFFFFFF; font-size: 13; text-shadow: false; }
+    .muted { text-color: #FFE0E0E0; font-size: 9; text-shadow: false; }
+    .btn   { background: #FF8E1B1B; border-color: #FFFF5555; border-width: 1;
+             radius: 4; text-color: #FFFFFF; font-size: 9; text-shadow: false; }
+  </style>
+
+  <!-- 面板：纵向排列，撑满窗口 / panel: vertical column filling the window -->
+  <panel class="panel" layout="column" width="100%" height="100%" padding="10" gap="6">
+    <label id="title" class="title" text="Hello, WassJS" width="100%" height="18"/>
+    <label id="status" class="muted" text="点下面的按钮试试。" width="100%" height="14"/>
+    <!-- 发送服务端动作 / sends a server action -->
+    <button id="btn_ping" class="btn" text="Ping 服务端" width="100%" height="20"/>
+    <!-- 渐出关闭 / fade-out close -->
+    <button id="btn_close" class="btn" text="关闭" width="100%" height="20"/>
+  </panel>
+</menu>

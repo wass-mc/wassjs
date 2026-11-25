@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  子组件：不是菜单，放在 wass/components/ 中。
+  这里故意复用 .card / .title 类名，但颜色与 menus/main.xml 不同，
+  用来验证样式作用域隔离（互相不污染）。
+  Child component, not a menu; lives in wass/components/.
+  It deliberately reuses the .card / .title class names with different colors than menus/main.xml
+  to verify that styles are scoped per document and do not leak into each other.
+-->
+<component id="button" class="card" layout="column" width="50%" height="100%" gap="4">
+  <style>
+    .card   { background: #2A1B24E6; border-color: #4A2F3A; border-width: 1; radius: 5; padding: 8; }
+    .title  { color: #FFD1E8; font-size: 12; text-shadow: false; }
+    .muted  { color: #C9A7B8; font-size: 9; text-shadow: false; }
+    .action { background: #5A2A42F2; border-color: #8A4568; border-width: 1; radius: 4; color: #FFE3F1; font-size: 9; text-shadow: false; }
+  </style>
+
+  <label class="title" text="组件按钮" width="100%" height="14"/>
+  <label class="muted" text="样式来自 components/button.xml（粉红色系）"
+         width="100%" height="20"/>
+  <button id="btn_component" class="action" text="我是组件里的按钮"
+          width="100%" height="22"/>
+  <label class="muted" text="include 后仍保留自己的样式表" width="100%" height="20"/>
+</component>
