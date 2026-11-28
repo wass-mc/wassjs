@@ -138,9 +138,3 @@ docs/                         文档 / documentation
 screenshots/                  截图 / screenshots
 llms.txt / AI_REFERENCE.md / ERROR_CORRECTION.md   AI 辅助开发入口 / AI-assisted development entry points
 ```
-
-## 许可 / License
-
-代码以 BSD-3-Clause 发布，见 LICENSE。LDLib2（MIT）、Rhino（MPL-2.0）、Glow Sans SC（SIL OFL 1.1）遵循各自许可。
-
-Code is released under BSD-3-Clause, see LICENSE. LDLib2 (MIT), Rhino (MPL-2.0) and Glow Sans SC (SIL OFL 1.1) follow their own licenses.
