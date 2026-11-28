@@ -138,3 +138,28 @@ docs/                         文档 / documentation
 screenshots/                  截图 / screenshots
 llms.txt / AI_REFERENCE.md / ERROR_CORRECTION.md   AI 辅助开发入口 / AI-assisted development entry points
 ```
+---
+
+## 许可 / License
+
+本项目采用 **CC0 1.0 Universal（公共领域贡献）** 许可发布。
+
+在法律允许的最大范围内，本项目作者放弃对本项目的一切版权及相关邻接权，并**不主张任何专利权**。任何人都可以出于任何目的——包括商业用途——自由使用、复制、修改、合并、发布、分发、再许可和/或出售本项目的代码与资源，无需获得授权、无需署名、无需附加任何条件。
+
+本项目按“原样”提供，不附带任何明示或默示的担保，包括但不限于适销性、特定用途适用性和非侵权担保。作者不对因使用本项目而产生的任何索赔、损害或其他责任负责。
+
+> 注意：本声明仅适用于本项目作者拥有版权或有权处置的部分。项目中若包含第三方代码、API、纹理、音效或其他资源，这些部分仍受其原有许可证约束，不在本 CC0 放弃范围内。
+
+CC0 1.0 许可全文：<https://creativecommons.org/publicdomain/zero/1.0/legalcode>
+
+---
+
+This project is released under the **CC0 1.0 Universal (Public Domain Dedication)** license.
+
+To the greatest extent permitted by law, the author of this project waives all copyright and related neighboring rights in this project and **asserts no patent rights**. Anyone may freely use, copy, modify, merge, publish, distribute, sublicense, and/or sell the code and assets of this project for any purpose, including commercial purposes, without permission, without attribution, and without any conditions.
+
+This project is provided "as is", without any express or implied warranty, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. The author is not liable for any claims, damages, or other liability arising from the use of this project.
+
+> Note: This declaration applies only to the parts for which the author owns the copyright or has the right to dispose of. If this project contains third-party code, APIs, textures, sounds, or other assets, those parts remain subject to their original licenses and are not covered by this CC0 waiver.
+
+CC0 1.0 full text: <https://creativecommons.org/publicdomain/zero/1.0/legalcode>
