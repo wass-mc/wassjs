@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  子组件：不是菜单，放在 wass/components/ 中。
+  这里故意复用 .card / .title 类名，但颜色与 menus/main.xml 不同，
+  用来验证样式作用域隔离（互相不污染）。
+  Child component, not a menu; lives in wass/components/.
+  It deliberately reuses the .card / .title class names with different colors than menus/main.xml
+  to verify that styles are scoped per document and do not leak into each other.
+-->
+<component id="qq_card" class="card" layout="column" width="50%" height="100%" gap="4">
+  <style>
+    .card  { background: #2A1B24E6; border-color: #4A2F3A; border-width: 1; radius: 5; padding: 8; }
+    .title { color: #FFD1E8; font-size: 12; text-shadow: false; }
+    .muted { color: #C9A7B8; font-size: 9; text-shadow: false; }
+    .accent { color: #FF9EC4; font-size: 10; text-shadow: false; }
+  </style>
+
+  <label class="title" text="子组件卡片" width="100%" height="14"/>
+  <label class="muted" text=".card 样式来自 components/qq_card.xml（粉红色系）"
+         width="100%" height="20"/>
+  <label class="accent" text="同名类名 · 不同作用域" width="100%" height="12"/>
+  <panel width="100%" height="30" layout="row" gap="4" alignItems="center">
+    <label class="muted" text="组件内嵌行" width="70" height="12"/>
+    <panel width="100%" height="18" background="#3A2630" radius="3"/>
+  </panel>
+  <label class="muted" text="include 后仍保留自己的样式表" width="100%" height="20"/>
+</component>

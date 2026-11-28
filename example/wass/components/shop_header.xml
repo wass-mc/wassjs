@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 商店页头：标题 / 副标题 / 右上角标记 / shop header: title, subtitle and a badge in the top right -->
+<row width="100%" height="34" gap="8" alignItems="center">
+  <column flex="1" gap="2">
+    <label id="shop_title" class="title" text="§6钻石商店" width="100%" height="18"/>
+    <label id="shop_subtitle" class="muted" text="§7商品 / 价格 / 文案全部来自 wass/json/shop.json"
+           width="100%" height="12"/>
+  </column>
+  <label id="shop_badge" class="accent" text="RED SHOP" width="90" height="14" textAlign="right"/>
+</row>

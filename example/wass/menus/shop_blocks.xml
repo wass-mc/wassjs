@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  第二个菜单：同一个 shop.json 的第二个分组（方块区）。
+  与 main.xml 共用页头组件和红色主题，证明「一个 JSON 驱动多个菜单」。
+  Second menu: the second group (blocks) of the same shop.json.
+  Shares the header component and the red theme with main.xml, showing one JSON driving several menus.
+-->
+<menu id="shop_blocks" title="方块区" width="880" height="640">
+  <style>
+    .panel       { background: #F25A1119; border-color: #FF5555; border-width: 1; radius: 8; }
+    .card        { background: #33FF8888; border-color: #FF6B6B; border-width: 1; radius: 6; padding: 6; }
+    .card-active { background: #66FF5555; border-color: #FFAAAA; border-width: 2; radius: 6; padding: 6; }
+    .btn         { background: #FF8E1B1B; border-color: #FFFF5555; border-width: 1; radius: 4; text-color: #FFFFFF; font-size: 9; text-shadow: false; }
+    .btn-accent  { background: #FFB71C1C; border-color: #FFFF8888; border-width: 1; radius: 4; text-color: #FFFFFF; font-size: 9; text-shadow: false; }
+    .title       { text-color: #FFF2E6E6; font-size: 15; text-shadow: false; }
+    .section     { text-color: #FFFFE7E0; font-size: 10; text-shadow: false; }
+    .muted       { text-color: #FFFFEFE8; font-size: 9; text-shadow: false; }
+    .accent      { text-color: #FFFFB3B3; font-size: 9; text-shadow: false; }
+    .price       { text-color: #FFFFD166; font-size: 9; text-shadow: false; }
+  </style>
+
+  <panel class="panel" layout="column" width="100%" height="100%" padding="10" gap="8">
+    <include src="components/shop_header.xml"/>
+
+    <row width="100%" height="112" gap="8">
+      <panel id="card_emerald" class="card-active" layout="column" width="31%" height="100%" gap="4">
+        <row width="100%" height="52" gap="8" alignItems="center">
+          <display-panel id="item_emerald" item="minecraft:emerald" size="48" orientation="south" angle="15"/>
+          <column flex="1" gap="2">
+            <label id="name_emerald" class="title" text="§a绿宝石" width="100%" height="16"/>
+            <label id="price_emerald" class="price" text="§e90 §7金币 / 颗" width="100%" height="12"/>
+            <label id="desc_emerald" class="muted" text="村民的最爱" width="100%" height="11"/>
+          </column>
+        </row>
+        <button id="pick_emerald" class="btn" text="选择绿宝石" width="100%" height="18"/>
+      </panel>
+
+      <panel id="card_gold" class="card" layout="column" width="31%" height="100%" gap="4">
+        <row width="100%" height="52" gap="8" alignItems="center">
+          <display-panel id="item_gold" item="minecraft:gold_ingot" size="48" orientation="west" angle="0"/>
+          <column flex="1" gap="2">
+            <label id="name_gold" class="title" text="§6金锭" width="100%" height="16"/>
+            <label id="price_gold" class="price" text="§e60 §7金币 / 个" width="100%" height="12"/>
+            <label id="desc_gold" class="muted" text="好看又好用" width="100%" height="11"/>
+          </column>
+        </row>
+        <button id="pick_gold" class="btn" text="选择金锭" width="100%" height="18"/>
+      </panel>
+
+      <panel id="card_redstone" class="card" layout="column" width="31%" height="100%" gap="4">
+        <row width="100%" height="52" gap="8" alignItems="center">
+          <display-panel id="item_redstone" item="minecraft:redstone" size="48" orientation="northeast" angle="-20"/>
+          <column flex="1" gap="2">
+            <label id="name_redstone" class="title" text="§c红石" width="100%" height="16"/>
+            <label id="price_redstone" class="price" text="§e12 §7金币 / 份" width="100%" height="12"/>
+            <label id="desc_redstone" class="muted" text="红石电路的血液" width="100%" height="11"/>
+          </column>
+        </row>
+        <button id="pick_redstone" class="btn" text="选择红石" width="100%" height="18"/>
+      </panel>
+    </row>
+
+    <panel class="card" layout="column" width="100%" height="86" gap="4">
+      <label id="selected_label" class="section" text="§7当前商品：绿宝石 (minecraft:emerald)" width="100%" height="14"/>
+      <row width="100%" height="16" gap="8" alignItems="center">
+        <label id="qty_label" class="accent" text="购买数量：§e1" width="120" height="14"/>
+        <slider id="qty_slider" width="100%" flex="1" height="14" min="1" max="64" value="1"/>
+      </row>
+      <label id="total_label" class="price" text="总计：§e90 §7金币" width="100%" height="14"/>
+    </panel>
+
+    <panel class="card" layout="column" width="100%" flex="1" gap="4">
+      <label class="section" text="方块区说明" width="100%" height="13"/>
+      <label class="muted" text="§8这个菜单和宝石区由同一个 wass/json/shop.json 生成。" width="100%" height="11"/>
+      <label class="muted" text="§8商品数量、名称、价格、图标朝向都来自 JSON，改数据不用改 XML。" width="100%" height="11"/>
+      <label class="muted" text="§8滑条控制购买数量，底部按钮执行 /say 指令。" width="100%" height="11"/>
+      <display-panel id="preview_item" item="minecraft:emerald" size="56" orientation="north" angle="45"/>
+      <label class="muted" text="§8↑ 单独一个 56px、north+45° 的展示图标" width="100%" height="11"/>
+    </panel>
+
+    <label id="shop_status" class="muted" text="§7选择商品后调整数量，再点“立即购买”。" width="100%" height="14"/>
+
+    <row width="100%" height="22" gap="8" alignItems="center">
+      <button id="btn_buy" class="btn-accent" text="§a立即购买" flex="1" height="20"/>
+      <button id="btn_showcase" class="btn" text="§b全屏展示" flex="1" height="20" open="showcase"/>
+      <button id="btn_anim" class="btn" text="§d动画演示" flex="1" height="20" open="animation_lab"/>
+      <button id="btn_back" class="btn" text="§b← 宝石区" flex="1" height="20" open="main"/>
+      <button id="btn_close" class="btn" text="§c关闭" flex="1" height="20"/>
+    </row>
+  </panel>
+</menu>
