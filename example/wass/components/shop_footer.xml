@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 商店页脚：购买 / 全屏展示 / 动画演示 / 切换分组 / 关闭 / shop footer: buy, fullscreen, animation demo, switch group, close -->
-<row width="100%" height="22" gap="8" alignItems="center">
-  <button id="btn_buy" class="btn-accent" text="§a立即购买" flex="1" height="20"/>
-  <button id="btn_showcase" class="btn" text="§b全屏展示" flex="1" height="20" open="showcase"/>
-  <button id="btn_anim" class="btn" text="§d动画演示" flex="1" height="20" open="animation_lab"/>
-  <button id="btn_blocks" class="btn" text="§a方块区 →" flex="1" height="20" open="shop_blocks"/>
-  <button id="btn_close" class="btn" text="§c关闭" flex="1" height="20"/>
-</row>
